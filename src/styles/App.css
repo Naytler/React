@@ -1,0 +1,12 @@
+#root {
+  max-width: 1440px;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  width: 1440px;
+  height: 980px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  box-sizing: border-box;
+  margin: auto;
+}

@@ -1,0 +1,37 @@
+.Filter {
+  margin-bottom: 24px;
+  margin-top: 88px;
+  align-self: flex-end;
+  margin-right: 24px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.filter__input {
+  box-sizing: border-box;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #d0d3da;
+}
+.filter__select {
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #d0d3da;
+}
+
+.Filter span:nth-child(1) {
+  margin-right: 8px;
+}
+
+.Filter span:nth-child(3) {
+  margin-left: 16px;
+  margin-right: 8px;
+}
+.Filter span:nth-child(5) {
+  margin-left: 8px;
+  margin-right: 36px;
+  color: #d0d3da;
+}

@@ -1,0 +1,47 @@
+button {
+  cursor: pointer;
+}
+
+.button-medium {
+  width: 272px;
+  height: 48px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.large-button {
+  max-width: 956px;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button-small {
+  height: 32px;
+  width: 32px;
+  font-size: 26px;
+  border-radius: 4px;
+}
+
+.button-transparent {
+  background: transparent;
+  border: 1px solid #d0d3da;
+}
+
+.button-pink {
+  background-color: #bd68ca;
+  color: #fff;
+  border: none;
+}
+
+.grey-button {
+  background-color: #d0d3da;
+  color: #afabab;
+  border: 1px solid #d0d3da;
+}

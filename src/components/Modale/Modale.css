@@ -1,0 +1,68 @@
+.background {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  width: 1440px;
+  height: 960px;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+}
+
+.modale {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 640px;
+  height: 960px;
+  text-align: center;
+}
+
+.modale__button {
+  position: relative;
+  display: flex;
+  text-align: center;
+  gap: 16px;
+  margin: 25px 0 42px 40px;
+}
+
+.modale__button::after {
+  border-bottom: 1px solid #d0d3da;
+  width: 640px;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -26px;
+  left: -40px;
+}
+
+.modale p {
+  text-align: start;
+  margin-left: 40px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.modale__input {
+  box-sizing: border-box;
+  width: 560px;
+  height: 40px;
+  padding-left: 8px;
+  border-radius: 8px;
+  border: 1px solid #d0d3da;
+}
+.modale__select {
+  width: 560px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #d0d3da;
+}
+
+.modale__select option {
+  padding: 8px;
+  height: 40px;
+}
+
+option {
+  height: 50px;
+}

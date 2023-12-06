@@ -1,0 +1,47 @@
+.modaleSmall {
+  position: absolute;
+  top: 860px;
+  width: 475px;
+  height: 108px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 5px 5px 25px #cccccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modaleSmall p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.modaleSmallButton {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modaleSmallButton span {
+  font-size: 16px;
+}
+
+.modaleSmallButton img {
+  margin-right: 5px;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
