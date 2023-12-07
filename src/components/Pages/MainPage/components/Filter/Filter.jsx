@@ -36,7 +36,7 @@ function Filter({
           <option value="30">30</option>
         </select>
         <span>Страница</span>
-        <input className="filter__input" type="text" value={valueDef} onChange={onPageChange} />
+        <input className="filter__input" type="text" value={valueDef} onChange={onPageChange} readOnly />
         <span>из {lengthData}</span>
         <Button onClick={handleDecrement}>{'<'}</Button>
         <Button onClick={handleIncrement}>{'>'}</Button>
