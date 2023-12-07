@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '../UIKit/Button/Button/Button';
 import './Modale.css';
 
-function Modale({ closeModal, setDataAdd, clearModale }) {
+function Modale({ closeModal, setDataAdd, clearModale, setIsOpen }) {
   const inputChange = (e) => {
     setDataAdd((prevData) => ({
       ...prevData,
@@ -30,9 +30,15 @@ function Modale({ closeModal, setDataAdd, clearModale }) {
     }));
   };
 
+  const handleCloseModale = (e) => {
+    if (e.target.className === 'background') {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <>
-      <div className="background">
+      <div className="background" onClick={handleCloseModale}>
         <div className="modale">
           <div className="modale__button">
             <Button onClick={clearModale} size={'medium'} color={'transparent'}>

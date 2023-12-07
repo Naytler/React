@@ -6,6 +6,8 @@ import ItemTop from './components/ItemTop/ItemTop';
 import Items from './components/items/Items.jsx';
 import Modale from '../../Modale/Modale.jsx';
 import ModaleSmall from '../../ModaleSmall/ModaleSmall.jsx';
+import useId from '../../hooks/hookId.jsx';
+
 import './MainPage.css';
 
 function MainPage() {
@@ -16,6 +18,8 @@ function MainPage() {
   const [inputVal, setInputVal] = useState(1);
   const [dataPaint, setDataPaint] = useState(0);
   const [showData, setShowData] = useState(0);
+  const [hideSmallModale, setHideSmallModale] = useState('');
+  const uniqueId = useId();
 
   let [dataAdd, setDataAdd] = useState({
     category: 'Название категории1',
@@ -27,13 +31,26 @@ function MainPage() {
     checked: false,
   });
   const lengthData = Math.ceil(safeData.length / selectedValue);
-  // console.log(lengthData);
+
+  useEffect(() => {
+    const closeModalTaskKey = (event) => {
+      if (event.keyCode === 27) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener('keydown', closeModalTaskKey);
+    return () => {
+      window.removeEventListener('keydown', closeModalTaskKey);
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     const filterData = () => {
       const buttonChange = safeData.slice(dataPaint, +showData + +selectedValue);
       setFilteredElements(buttonChange);
     };
+    inputVal == 1 ? setShowData(0) : '';
+
     filterData();
   }, [showData, safeData]);
 
@@ -53,7 +70,7 @@ function MainPage() {
       brand: dataAdd.brand,
       goods: dataAdd.goods,
       cashback: dataAdd.cashback,
-      id: safeData.length + 1,
+      id: uniqueId,
       checked: false,
     };
     setIsOpen(false);
@@ -71,13 +88,18 @@ function MainPage() {
     setInputVal(e.target.value);
   };
 
-  const headerCheckboxChange = () => {
-    const allChecked = safeData.every((item) => item.checked);
+  const headerCheckboxChange = (e) => {
+    let allChecked;
+    if (e.target.checked === true) {
+      allChecked = safeData.every((item) => (item.checked = true));
+    }
+    if (e.target.checked === false) {
+      allChecked = safeData.every((item) => (item.checked = false));
+    }
     const updatedList = safeData.map((item) => ({
       ...item,
-      checked: !allChecked,
+      checked: allChecked,
     }));
-
     setSafeData(updatedList);
   };
 
@@ -90,21 +112,18 @@ function MainPage() {
       }
     });
     setSafeData(ssd);
+    setHideSmallModale('');
   };
 
   const onDelete = () => {
     const newList = safeData.filter((item) => !item.checked);
     setSafeData(newList);
-
     const newCurrentPage = Math.ceil(newList.length / selectedValue);
-    console.log(newCurrentPage);
-    console.log(inputVal);
     if (newCurrentPage < inputVal) {
       setDataPaint((prev) => parseInt(prev - selectedValue));
       setInputVal(inputVal - 1);
       setShowData((prev) => parseInt(prev - selectedValue));
     }
-    // setSafeData(newCurrentPage > 0 ? newCurrentPage : 1);
   };
 
   const handleDeleteinput = () => {
@@ -126,7 +145,9 @@ function MainPage() {
       <Button onClick={openModal} size={'large'} color={'pink'}>
         Добавить акцию
       </Button>
-      {isOpen && <Modale closeModal={closeModal} setDataAdd={setDataAdd} clearModale={handleDeleteinput} />}
+      {isOpen && (
+        <Modale closeModal={closeModal} setDataAdd={setDataAdd} clearModale={handleDeleteinput} setIsOpen={setIsOpen} />
+      )}
       <ItemTop headerCheckboxChange={headerCheckboxChange} />
       <div className="itemsBlock">
         {filteredElements.map((filteredElements) => (
@@ -137,7 +158,12 @@ function MainPage() {
           />
         ))}
       </div>
-      <ModaleSmall data={safeData} onDelete={onDelete} />
+      <ModaleSmall
+        data={safeData}
+        onDelete={onDelete}
+        setHideSmallModale={setHideSmallModale}
+        hideSmallModale={hideSmallModale}
+      />
     </div>
   );
 }

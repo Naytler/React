@@ -46,14 +46,3 @@ function Filter({
 }
 
 export default Filter;
-
-// const handleSelectChange = (e) => {
-//   onChange(e);
-// };
-
-// const onPageChange = (e) => {
-//   const value = e.target.value;
-//   setState(value);
-//   console.log(e.target.value);
-//   console.log(state);
-// };
