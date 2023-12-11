@@ -31,17 +31,17 @@ button {
 
 .button-transparent {
   background: transparent;
-  border: 1px solid #d0d3da;
+  border: 1px solid var(--border-color);
 }
 
 .button-pink {
-  background-color: #bd68ca;
-  color: #fff;
+  background-color: var(--button-pink);
+  color: var(--white-color);
   border: none;
 }
 
 .grey-button {
-  background-color: #d0d3da;
+  background-color: var(--border-color);
   color: #afabab;
-  border: 1px solid #d0d3da;
+  border: 1px solid var(--border-color);
 }

@@ -6,11 +6,9 @@ function Button({ size, color, children, onClick }) {
     color === 'transparent' ? 'button-transparent' : color === 'pink' ? 'button-pink' : 'grey-button';
   const buttonClass = `${buttonSizeClass} ${buttonColorClass}`;
   return (
-    <>
-      <button className={buttonClass} onClick={onClick}>
-        {children}
-      </button>
-    </>
+    <button className={buttonClass} onClick={onClick}>
+      {children}
+    </button>
   );
 }
 

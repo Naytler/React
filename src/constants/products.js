@@ -1,4 +1,4 @@
-const data = [
+const MOC_PRODUCTS_DATA = [
   {
     category: '1Эстетический уход',
     subCategory: 'Скрабы',
@@ -235,4 +235,4 @@ const data = [
   },
 ];
 
-export default data;
+export default MOC_PRODUCTS_DATA;

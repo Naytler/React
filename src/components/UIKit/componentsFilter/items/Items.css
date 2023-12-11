@@ -3,9 +3,5 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-right: 20px;
+  padding-right: 1.3rem;
 }
-
-/* 
-overflow: elepsis
-overflow: hidden */

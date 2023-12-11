@@ -1,0 +1,11 @@
+:root {
+  --transp-color: rgba(0, 0, 0, 0.7);
+  --white-color: #fff;
+  --grey-color: #cccccc;
+  --border-color: #d0d3da;
+  --button-pink: #bd68ca;
+  --itemTop: #737680;
+  --itemTop2: #ebecef;
+
+  --border6px: border-radius: 6px;;
+}

@@ -9,8 +9,8 @@
   text-align: left;
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding-left: 16px;
+  gap: 1rem;
+  padding-left: 1rem;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -20,10 +20,10 @@
 }
 
 .active {
-  background-color: #c06ecc;
-  color: white;
+  background-color: var(--button-pink);
+  color: var(--white-color);
 }
 
 .active path {
-  fill: white;
+  fill: var(--white-color);
 }

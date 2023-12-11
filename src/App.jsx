@@ -1,12 +1,9 @@
-import { useState } from 'react';
-import Nav from './components/Navigation/Nav';
-import Pages from './components/Pages/Pages';
-import './styles/App.css';
 import { BrowserRouter } from 'react-router-dom';
+import Nav from './Navigation/Nav';
+import Pages from './Pages/Pages';
+import './styles/App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <BrowserRouter>
       <Nav />

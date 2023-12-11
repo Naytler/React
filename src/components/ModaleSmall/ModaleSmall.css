@@ -4,8 +4,8 @@
   width: 475px;
   height: 108px;
   border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 5px 5px 25px #cccccc;
+  background-color: var(--white-color);
+  box-shadow: 5px 5px 25px var(--grey-color);
   display: flex;
   flex-direction: column;
   justify-content: space-around;

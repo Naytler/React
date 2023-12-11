@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import data from '../../../constants/products.jsx';
-import Filter from './components/Filter/Filter';
-import Button from '../../UIKit/Button/Button/Button';
-import ItemTop from './components/ItemTop/ItemTop';
-import Items from './components/items/Items.jsx';
-import Modale from '../../Modale/Modale.jsx';
-import ModaleSmall from '../../ModaleSmall/ModaleSmall.jsx';
-import useId from '../../hooks/hookId.jsx';
-
+import MOC_PRODUCTS_DATA from '../../constants/products.js';
+import { Filter, ItemTop, Items, Button } from '../../components/index.js';
+import Modale from '../../components/Modale/Modale.jsx';
+import ModaleSmall from '../../components/ModaleSmall/ModaleSmall.jsx';
 import './MainPage.css';
 
 function MainPage() {
-  const [safeData, setSafeData] = useState(data);
+  const [safeData, setSafeData] = useState(MOC_PRODUCTS_DATA);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState(10);
   const [filteredElements, setFilteredElements] = useState(safeData);
@@ -19,7 +14,7 @@ function MainPage() {
   const [dataPaint, setDataPaint] = useState(0);
   const [showData, setShowData] = useState(0);
   const [hideSmallModale, setHideSmallModale] = useState('');
-  const uniqueId = useId();
+  const newId = `id-${Math.floor(Date.now() / 1000)}`;
 
   let [dataAdd, setDataAdd] = useState({
     category: 'Название категории1',
@@ -59,10 +54,6 @@ function MainPage() {
     setFilteredElements(selectChange);
   }, [selectedValue]);
 
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
   const closeModal = () => {
     let object = {
       category: dataAdd.category,
@@ -70,7 +61,7 @@ function MainPage() {
       brand: dataAdd.brand,
       goods: dataAdd.goods,
       cashback: dataAdd.cashback,
-      id: uniqueId,
+      id: newId,
       checked: false,
     };
     setIsOpen(false);
@@ -142,7 +133,7 @@ function MainPage() {
         setShowData={setShowData}
         selectedValue={selectedValue}
       />
-      <Button onClick={openModal} size={'large'} color={'pink'}>
+      <Button onClick={() => setIsOpen(true)} size={'large'} color={'pink'}>
         Добавить акцию
       </Button>
       {isOpen && (

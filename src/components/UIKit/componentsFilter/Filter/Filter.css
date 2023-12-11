@@ -1,8 +1,8 @@
 .Filter {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   margin-top: 88px;
   align-self: flex-end;
-  margin-right: 24px;
+  margin-right: 1.5rem;
   height: 32px;
   display: flex;
   align-items: center;
@@ -14,24 +14,24 @@
   width: 32px;
   text-align: center;
   border-radius: 6px;
-  border: 1px solid #d0d3da;
+  border: 1px solid var(--border-color);
 }
 .filter__select {
   height: 32px;
   border-radius: 6px;
-  border: 1px solid #d0d3da;
+  border: 1px solid var(--border-color);
 }
 
 .Filter span:nth-child(1) {
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .Filter span:nth-child(3) {
-  margin-left: 16px;
-  margin-right: 8px;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
 }
 .Filter span:nth-child(5) {
-  margin-left: 8px;
-  margin-right: 36px;
-  color: #d0d3da;
+  margin-left: 0.5rem;
+  margin-right: 2rem;
+  color: var(--border-color);
 }
