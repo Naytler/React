@@ -1,0 +1,30 @@
+.inputCust {
+  position: relative;
+  align-self: end;
+  margin: 24px 24px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  position: absolute;
+  left: 8px;
+  top: 12px;
+}
+
+.input {
+  width: 320px;
+  height: 40px;
+  padding-left: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 2%, 90%);
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 15px;
+  top: 12px;
+}

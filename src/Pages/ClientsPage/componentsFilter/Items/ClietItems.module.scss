@@ -1,0 +1,27 @@
+.client__items__goods {
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 1.3rem;
+  box-sizing: border-box;
+  height: 68px;
+  align-items: center;
+  line-height: 65px;
+  border-bottom: 1px solid rgb(240, 237, 237);
+  & {
+    li:nth-child(1) {
+      padding-left: 0.5rem;
+      box-sizing: border-box;
+      width: 320px;
+      padding-right: 0;
+    }
+    & {
+      li:nth-child(2) {
+        box-sizing: border-box;
+        width: 320px;
+        padding-right: 0;
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../UIKit/Button/Button';
-import './Modale.css';
+import styles from './Modale.module.scss';
 
 function Modale({ closeModal, setDataAdd, clearModale, setIsOpen }) {
   const inputChange = (e) => {
@@ -31,15 +31,16 @@ function Modale({ closeModal, setDataAdd, clearModale, setIsOpen }) {
   };
 
   const handleCloseModale = (e) => {
-    if (e.target.className === 'background') {
+    if (e.target.className === '_background_17ugk_1') {
+      console.log(e.target.className);
       setIsOpen(false);
     }
   };
 
   return (
-    <div className="background" onClick={handleCloseModale}>
-      <div className="modale">
-        <div className="modale__button">
+    <div className={styles.background} onClick={handleCloseModale}>
+      <div className={styles.modale}>
+        <div className={styles.modale__button}>
           <Button onClick={clearModale} size={'medium'} color={'transparent'}>
             Удалить
           </Button>
@@ -48,21 +49,21 @@ function Modale({ closeModal, setDataAdd, clearModale, setIsOpen }) {
           </Button>
         </div>
         <p>Начисление кешбека с покупки</p>
-        <input className="modale__input" type="text" placeholder="20%" onChange={inputChange} />
+        <input className={styles.modale__input} type="text" placeholder="20%" onChange={inputChange} />
         <p>Категория</p>
-        <select className="modale__select" name="" id="" onChange={chooseCategory}>
+        <select className={styles.modale__select} name="" id="" onChange={chooseCategory}>
           <option value="Название категории1">Название категории1</option>
           <option value="Название категории2">Название категории2</option>
           <option value="Название категории3">Название категории3</option>
         </select>
         <p>Подкатегория</p>
-        <select className="modale__select" name="" id="" onChange={chooseSubCategory}>
+        <select className={styles.modale__select} name="" id="" onChange={chooseSubCategory}>
           <option value="новый1">новый1 </option>
           <option value="новый2">новый2 </option>
           <option value="новый3">новый3 </option>
         </select>
         <p>Бренд</p>
-        <select className="modale__select" name="" id="" onChange={chooseBrand}>
+        <select className={styles.modale__select} name="" id="" onChange={chooseBrand}>
           <option value="Имя бренда1">Имя бренда1</option>
           <option value="Имя бренда2">Имя бренда2</option>
           <option value="Имя бренда3">Имя бренда3</option>

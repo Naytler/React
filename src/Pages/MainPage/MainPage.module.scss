@@ -1,0 +1,15 @@
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 64px;
+}
+
+.itemsBlock {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-width: 959px;
+  height: 560px;
+  width: 100%;
+}

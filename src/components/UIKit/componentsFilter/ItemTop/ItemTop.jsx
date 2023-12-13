@@ -1,9 +1,9 @@
 import React from 'react';
-import './ItemTop.css';
+import styles from './ItemTop.module.scss';
 
 function ItemTop({ headerCheckboxChange }) {
   return (
-    <div className="ItemTop">
+    <div className={styles.ItemTop}>
       <ul>
         <li>
           <input type="checkbox" onChange={headerCheckboxChange} />

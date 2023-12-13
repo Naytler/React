@@ -1,14 +1,15 @@
-.mainPage {
+.сlientsPage {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
-.itemsBlock {
-  display: flex;
+.clientsitemsBlock {
   flex-direction: column;
   overflow-y: scroll;
   max-width: 959px;
-  height: 560px;
+  height: 700px;
   width: 100%;
+  margin: 0;
 }

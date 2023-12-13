@@ -1,5 +1,5 @@
 import Button from '../../Button/Button';
-import './Filter.css';
+import styles from './Filter.module.scss';
 
 function Filter({
   handleSelectChange,
@@ -27,15 +27,15 @@ function Filter({
     }
   };
   return (
-    <div className="Filter">
+    <div className={styles.Filter}>
       <span>Показывать</span>
-      <select className="filter__select" name="selecе" id="" onChange={handleSelectChange}>
+      <select className={styles.filter__select} name="selecе" id="" onChange={handleSelectChange}>
         <option value="10">10</option>
         <option value="20">20</option>
         <option value="30">30</option>
       </select>
       <span>Страница</span>
-      <input className="filter__input" type="text" value={valueDef} onChange={onPageChange} readOnly />
+      <input className={styles.filter__input} type="text" value={valueDef} onChange={onPageChange} readOnly />
       <span>из {lengthData}</span>
       <Button onClick={handleDecrement}>{'<'}</Button>
       <Button onClick={handleIncrement}>{'>'}</Button>

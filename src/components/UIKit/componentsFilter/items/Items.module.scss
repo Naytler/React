@@ -1,7 +1,15 @@
+.Items {
+  justify-content: start;
+  align-items: center;
+}
+
 .items__goods {
   box-sizing: border-box;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding-right: 1.3rem;
+  height: 68px;
+  align-items: center;
+  line-height: 65px;
 }

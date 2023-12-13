@@ -10,11 +10,11 @@ import Vector7 from '../images/imagesNav/Vector7';
 import Vector8 from '../images/imagesNav/Vector8';
 import Vector9 from '../images/imagesNav/Vector9';
 import Vector10 from '../images/imagesNav/Vector10';
-import './Nav.css';
+import styles from './Nav.module.scss';
 
 function Nav() {
   return (
-    <div className="navButton">
+    <div className={styles.navButton}>
       <LinkNav text="Продукты" image={<Vector1 />} to="/products" />
       <LinkNav text="Пользователи" image={<Vector2 />} to="/clients" />
       <LinkNav text="Категории" image={<Vector3 />} to="/categories" />

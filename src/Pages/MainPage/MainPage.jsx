@@ -3,7 +3,7 @@ import MOC_PRODUCTS_DATA from '../../constants/products.js';
 import { Filter, ItemTop, Items, Button } from '../../components/index.js';
 import Modale from '../../components/Modale/Modale.jsx';
 import ModaleSmall from '../../components/ModaleSmall/ModaleSmall.jsx';
-import './MainPage.css';
+import styles from './MainPage.module.scss';
 
 function MainPage() {
   const [safeData, setSafeData] = useState(MOC_PRODUCTS_DATA);
@@ -122,7 +122,7 @@ function MainPage() {
   };
 
   return (
-    <div className="mainPage">
+    <div className={styles.mainPage}>
       <Filter
         handleSelectChange={handleSelectChange}
         onPageChange={onPageChange}
@@ -140,7 +140,7 @@ function MainPage() {
         <Modale closeModal={closeModal} setDataAdd={setDataAdd} clearModale={handleDeleteinput} setIsOpen={setIsOpen} />
       )}
       <ItemTop headerCheckboxChange={headerCheckboxChange} />
-      <div className="itemsBlock">
+      <div className={styles.itemsBlock}>
         {filteredElements.map((filteredElements) => (
           <Items
             key={filteredElements.id}

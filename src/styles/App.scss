@@ -3,10 +3,19 @@
   padding: 2rem;
   background-color: #f8f8f8;
   width: 1440px;
-  height: 980px;
+  height: 950px;
   display: flex;
   align-items: center;
   gap: 40px;
   box-sizing: border-box;
   margin: auto;
+}
+
+.active {
+  background-color: var(--button-pink);
+  color: var(--white-color);
+}
+
+.active path {
+  fill: var(--white-color);
 }

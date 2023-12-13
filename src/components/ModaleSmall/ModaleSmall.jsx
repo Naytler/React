@@ -1,25 +1,25 @@
 import logo from '../../images/modaleSmall/Vector.svg';
 import close from '../../images/modaleSmall/x.svg';
-import './ModaleSmall.css';
+import styles from './ModaleSmall.module.scss';
 
 function ModaleSmall({ data, onDelete, hideSmallModale, setHideSmallModale }) {
   const counter = data.filter((item) => item.checked).length;
 
-  let transpar = counter > 0 ? 'show' : 'hide';
+  let transpar = counter > 0 ? styles.show : styles.hide;
 
   const handleCloseModal = () => {
-    setHideSmallModale('hide');
+    setHideSmallModale(styles.hide);
   };
 
   return (
-    <div className={`modaleSmall ${transpar} ${hideSmallModale}`}>
+    <div className={`${styles.modaleSmall} ${transpar} ${hideSmallModale}`}>
       <button onClick={handleCloseModal}>
-        <img className="close" src={close} alt="close" />
+        <img className={styles.close} src={close} alt="close" />
       </button>
       <p>
         Количество выбранных позиций: <span>{counter}</span>
       </p>
-      <button className="modaleSmallButton" onClick={onDelete}>
+      <button className={styles.modaleSmallButton} onClick={onDelete}>
         <img src={logo} alt="button" />
         <span>Удалить</span>
       </button>

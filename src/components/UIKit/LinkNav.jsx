@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom';
-import './LinkNav.css';
+import styles from './LinkNav.module.scss';
 
 function LinkNav({ text, image, to }) {
   return (
-    <NavLink to={to} className="linkNav" activeclassname="active">
+    <NavLink to={to} className={styles.linkNav} activeclassname={styles.active}>
       {image}
       {text}
     </NavLink>
